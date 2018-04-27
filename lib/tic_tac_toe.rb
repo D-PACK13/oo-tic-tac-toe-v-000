@@ -59,17 +59,12 @@ class TicTacToe
     m = valid_move?(index)
     if m == true
       move(index, current_player)
-      
-    else m == false
-      until m == true
-        puts "Sorry, that was an invalid move. Please enter 1-9:"
-        display_board
-        i = gets.strip
-        index = input_to_index(i)
-        m = valid_move?(index)
-        move(index, current_player)
-      end
+      display_board
+    else
+      turn
     end
   end
+end
+     
   
 end
